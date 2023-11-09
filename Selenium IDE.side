@@ -1,0 +1,266 @@
+{
+  "id": "a7422326-6b41-45a9-8c39-7dd89538d955",
+  "version": "2.0",
+  "name": "Selenium IDE",
+  "url": "http://localhost:63343/seleniumIde/index.html",
+  "tests": [{
+    "id": "9f778e58-819e-4016-b3e3-dc42c3002a0d",
+    "name": "Correctly filled form",
+    "commands": [{
+      "id": "8b999aeb-c5d6-48e2-a682-7a4e2b9fd831",
+      "comment": "",
+      "command": "open",
+      "target": "/seleniumIde/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06cacdec-c862-4f7f-941f-93957dc8dbf0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1314x831",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdba66f0-77d8-48c0-8fa0-ea967ed33fd9",
+      "comment": "",
+      "command": "type",
+      "target": "id=input1",
+      "targets": [
+        ["id=input1", "id"],
+        ["name=input1", "name"],
+        ["css=#input1", "css:finder"],
+        ["xpath=//input[@id='input1']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "6000172e-a183-41d1-8ec4-96e850f6c370",
+      "comment": "",
+      "command": "type",
+      "target": "id=input2",
+      "targets": [
+        ["id=input2", "id"],
+        ["name=input2", "name"],
+        ["css=#input2", "css:finder"],
+        ["xpath=//input[@id='input2']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "70652cda-684c-4643-becb-cde0647e0b50",
+      "comment": "",
+      "command": "type",
+      "target": "id=input3",
+      "targets": [
+        ["id=input3", "id"],
+        ["name=input3", "name"],
+        ["css=#input3", "css:finder"],
+        ["xpath=//input[@id='input3']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "a3cf214d-db8b-4ca8-af36-76850d67514b",
+      "comment": "",
+      "command": "type",
+      "target": "id=input4",
+      "targets": [
+        ["id=input4", "id"],
+        ["name=input4", "name"],
+        ["css=#input4", "css:finder"],
+        ["xpath=//input[@id='input4']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "7d5ce095-8f9a-4b17-b63d-2c2e57a92f7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//form[@id='myForm']/button/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Verify!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a475c20b-ccfb-4d66-b946-bda5ab93193c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [
+        ["id=error", "id"],
+        ["css=#error", "css:finder"],
+        ["xpath=//p[@id='error']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'All good!')]", "xpath:innerText"]
+      ],
+      "value": "All good!"
+    }]
+  }, {
+    "id": "9fb7611f-804e-4f87-bea8-02c8b0ac2dd2",
+    "name": "Partially filled form",
+    "commands": [{
+      "id": "bc9695ad-58dd-4c59-822b-5008efdabb82",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73c31937-c8f1-49ed-8d20-3da30fb18a32",
+      "comment": "",
+      "command": "type",
+      "target": "id=input1",
+      "targets": [
+        ["id=input1", "id"],
+        ["name=input1", "name"],
+        ["css=#input1", "css:finder"],
+        ["xpath=//input[@id='input1']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "cdf59e98-8253-44ad-991b-2564546425b9",
+      "comment": "",
+      "command": "type",
+      "target": "id=input3",
+      "targets": [
+        ["id=input3", "id"],
+        ["name=input3", "name"],
+        ["css=#input3", "css:finder"],
+        ["xpath=//input[@id='input3']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "ec9dbb87-cd15-418e-a5da-f7832695d0fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//form[@id='myForm']/button/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Verify!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65b6bb9a-efb7-4c06-ab42-74a298a57eca",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [],
+      "value": "Fill out the form!"
+    }, {
+      "id": "9600f38b-185c-41bd-ac52-909f45062700",
+      "comment": "",
+      "command": "type",
+      "target": "id=input2",
+      "targets": [
+        ["id=input2", "id"],
+        ["name=input2", "name"],
+        ["css=#input2", "css:finder"],
+        ["xpath=//input[@id='input2']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "7b40a3f8-df2c-4cee-8ae8-20a86353ee7e",
+      "comment": "",
+      "command": "type",
+      "target": "id=input4",
+      "targets": [
+        ["id=input4", "id"],
+        ["name=input4", "name"],
+        ["css=#input4", "css:finder"],
+        ["xpath=//input[@id='input4']", "xpath:attributes"],
+        ["xpath=//form[@id='myForm']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "3fbe400e-8a22-4b5b-bb4c-973652ccf45d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//form[@id='myForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Verify!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a25c7e28-7a3d-4573-93c4-71ebfc5bd7a9",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [],
+      "value": "Bad value for field #2"
+    }]
+  }, {
+    "id": "0bac56ad-ad9f-43e4-8b1c-7e39a36288ee",
+    "name": "Empty form",
+    "commands": [{
+      "id": "20aa0ed8-34d2-4dab-89c2-bb1da7c8d96e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:63343/seleniumIde/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8adf767f-64e9-4b38-9524-676440627ceb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1314x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04ed8eee-b022-4ed5-8c3b-632e8b1fa7c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//form[@id='myForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Verify!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bf6d718-0754-4b55-86f5-12f7f3a9ed6d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [],
+      "value": "Fill out the form!"
+    }, {
+      "id": "3edab389-2a98-4424-8dfe-edc164f74d20",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1d42a87c-913d-4022-a769-bf40f6804422",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:63343/", "http://localhost:63343/seleniumIde/index.html"],
+  "plugins": []
+}

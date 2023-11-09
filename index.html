@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Elements</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById("myForm").addEventListener("submit", function(e) {
+          e.preventDefault() // Cancel the default action
+          disableErrorMessage();
+          validateForm();
+        });
+      });
+      function validateForm() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].value.trim() === '') {
+            enableErrorMessage("Fill out the form!");
+            return false;
+          }
+        }
+
+        for (i = 0; i < inputs.length; i++) {
+          if (inputs[i].value.trim() != i+1) {
+            enableErrorMessage(`Bad value for field #${i+1}`);
+            return false;
+          }
+        }
+
+        enableErrorMessage("All good!");
+        return true;
+      }
+
+      function enableErrorMessage(message) {
+        var error = document.querySelector('#error');
+        error.textContent = message;
+        error.removeAttribute("style");
+      }
+
+      function disableErrorMessage() {
+        var error = document.querySelector('#error');
+        error.textContent = "";
+        error.setAttribute("style", "visibility: hidden");
+      }
+    </script>
+</head>
+<body>
+<a href="index20.html">20 elements</a>
+<h1>Input Elements</h1>
+<h2>Put numbers from 1 to 20 and click Verify button to see if you did it correctly</h2>
+<form id="myForm">
+    <p id = 'error' style="visibility: hidden">
+    </p>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" name="input1"><br>
+
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" name="input2"><br>
+
+    <label for="input3">Input 3:</label>
+    <input type="text" id="input3" name="input3"><br>
+
+    <label for="input4">Input 4:</label>
+    <input type="text" id="input4" name="input4"><br>
+
+<!--    <label for="input5">Input 5:</label>-->
+<!--    <input type="text" id="input5" name="input5"><br>-->
+
+<!--    <label for="input6">Input 6:</label>-->
+<!--    <input type="text" id="input6" name="input6"><br>-->
+
+<!--    <label for="input7">Input 7:</label>-->
+<!--    <input type="text" id="input7" name="input7"><br>-->
+
+<!--    <label for="input8">Input 8:</label>-->
+<!--    <input type="text" id="input8" name="input8"><br>-->
+
+<!--    <label for="input9">Input 9:</label>-->
+<!--    <input type="text" id="input9" name="input9"><br>-->
+
+<!--    <label for="input10">Input 10:</label>-->
+<!--    <input type="text" id="input10" name="input10"><br>-->
+
+<!--    <label for="input11">Input 11:</label>-->
+<!--    <input type="text" id="input11" name="input11"><br>-->
+
+<!--    <label for="input12">Input 12:</label>-->
+<!--    <input type="text" id="input12" name="input12"><br>-->
+
+<!--    <label for="input13">Input 13:</label>-->
+<!--    <input type="text" id="input13" name="input13"><br>-->
+
+<!--    <label for="input14">Input 14:</label>-->
+<!--    <input type="text" id="input14" name="input14"><br>-->
+
+<!--    <label for="input15">Input 15:</label>-->
+<!--    <input type="text" id="input15" name="input15"><br>-->
+
+<!--    <label for="input16">Input 16:</label>-->
+<!--    <input type="text" id="input16" name="input16"><br>-->
+
+<!--    <label for="input17">Input 17:</label>-->
+<!--    <input type="text" id="input17" name="input17"><br>-->
+
+<!--    <label for="input18">Input 18:</label>-->
+<!--    <input type="text" id="input18" name="input18"><br>-->
+
+<!--    <label for="input19">Input 19:</label>-->
+<!--    <input type="text" id="input19" name="input19"><br>-->
+
+<!--    <label for="input20">Input 20:</label>-->
+<!--    <input type="text" id="input20" name="input20"><br>-->
+
+    <br>
+    <br>
+    <button><b>Verify!</b></button>
+</form>
+</body>
+</html>
