@@ -15,26 +15,27 @@
 
         for (var i = 0; i < inputs.length; i++) {
           if (inputs[i].value.trim() === '') {
-            enableErrorMessage("Fill out the form!");
+            enableErrorMessage("Fill out the form!", "red");
             return false;
           }
         }
 
         for (i = 0; i < inputs.length; i++) {
           if (inputs[i].value.trim() != i+1) {
-            enableErrorMessage(`Bad value for field #${i+1}`);
+            enableErrorMessage(`Bad value for field #${i+1}`, "red");
             return false;
           }
         }
 
-        enableErrorMessage("All good!");
+        enableErrorMessage("All good!", "green");
         return true;
       }
 
-      function enableErrorMessage(message) {
+      function enableErrorMessage(message, color) {
         var error = document.querySelector('#error');
         error.textContent = message;
         error.removeAttribute("style");
+        error.setAttribute("style", `color: ${color}`);
       }
 
       function disableErrorMessage() {
@@ -47,9 +48,9 @@
 <body>
 <a href="index20.html">20 elements</a>
 <h1>Input Elements</h1>
-<h2>Put numbers from 1 to 20 and click Verify button to see if you did it correctly</h2>
+<h2>Put numbers from 1 to 4 and click Verify button to see if you did it correctly</h2>
 <form id="myForm">
-    <p id = 'error' style="visibility: hidden">
+    <p id = 'error' style="visibility: hidden; color: red">
     </p>
     <label for="input1">Input 1:</label>
     <input type="text" id="input1" name="input1"><br>
